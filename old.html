@@ -1,0 +1,134 @@
+<html>
+<body>
+								<div id='timelineGraph' style='height: 500px;'></div>
+								<script src="highcharts.src.js"></script>
+								<script src="exporting.js"></script>
+								<script>
+								
+									var sets = [{"name":"Chrome","data":[{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"10","nickname":"Chrome 10","details":null,"release":"2011-03-08","status":"legacy","score":"269"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"14","nickname":"Chrome 14","details":null,"release":"2011-09-16","status":"legacy","score":"304"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"21","nickname":"Chrome 21","details":null,"release":"2012-07-31","status":"legacy","score":"386"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"22","nickname":"Chrome 22","details":null,"release":"2012-09-25","status":"legacy","score":"396"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"23","nickname":"Chrome 23","details":null,"release":"2012-11-06","status":"legacy","score":"428"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"24","nickname":"Chrome 24","details":null,"release":"2013-01-10","status":"legacy","score":"433"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"25","nickname":"Chrome 25","details":null,"release":"2013-02-05","status":"legacy","score":"450"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"26","nickname":"Chrome 26","details":null,"release":"2013-03-26","status":"legacy","score":"458"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"32","nickname":"Chrome 32","details":null,"release":"2014-01-14","status":"legacy","score":"464"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"33","nickname":"Chrome 33","details":null,"release":"2014-02-20","status":"legacy","score":"470"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"34","nickname":"Chrome 34","details":null,"release":"2014-04-08","status":"legacy","score":"475"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"35","nickname":"Chrome 35","details":null,"release":"2014-05-20","status":"legacy","score":"482"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"36","nickname":"Chrome 36","details":null,"release":"2014-07-16","status":"legacy","score":"486"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"37","nickname":"Chrome 37","details":null,"release":"2014-09-09","status":"legacy","score":"494"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"38","nickname":"Chrome 38","details":null,"release":"2014-10-07","status":"legacy","score":"499"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"39","nickname":"Chrome 39","details":null,"release":"2014-11-18","status":"legacy","score":"501"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"40","nickname":"Chrome 40","details":null,"release":"2015-01-21","status":"legacy","score":"511"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"41","nickname":"Chrome 41","details":null,"release":"2015-03-03","status":"legacy","score":"523"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"42","nickname":"Chrome 42","details":null,"release":"2015-04-14","status":"legacy","score":"523"},{"importance":"1","name":"Chrome","grouped":"Chrome","variant":"chrome","version":"43","nickname":"Chrome 43","details":null,"release":"2015-04-19","status":"current","score":"526"}]},{"name":"Firefox","data":[{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"1.5","nickname":"Firefox 1.5","details":null,"release":"2005-11-29","status":"legacy","score":"18"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"2","nickname":"Firefox 2.0","details":null,"release":"2006-10-24","status":"legacy","score":"30"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"3","nickname":"Firefox 3.0","details":null,"release":"2008-06-17","status":"legacy","score":"52"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"3.6","nickname":"Firefox 3.6","details":null,"release":"2010-01-21","status":"legacy","score":"150"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"11","nickname":"Firefox 11","details":null,"release":"2012-03-13","status":"legacy","score":"322"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"12","nickname":"Firefox 12","details":null,"release":"2012-04-24","status":"legacy","score":"322"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"13","nickname":"Firefox 13","details":null,"release":"2012-06-05","status":"legacy","score":"322"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"14","nickname":"Firefox 14","details":null,"release":"2012-06-26","status":"legacy","score":"327"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"16","nickname":"Firefox 16","details":null,"release":"2012-10-09","status":"legacy","score":"330"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"17","nickname":"Firefox 17","details":null,"release":"2012-11-30","status":"legacy","score":"360"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"18","nickname":"Firefox 18","details":null,"release":"2013-01-18","status":"legacy","score":"371"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"20","nickname":"Firefox 20","details":null,"release":"2013-04-02","status":"legacy","score":"377"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"21","nickname":"Firefox 21","details":null,"release":"2013-05-21","status":"legacy","score":"380"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"24","nickname":"Firefox 24","details":null,"release":"2013-09-17","status":"legacy","score":"404"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"25","nickname":"Firefox 25","details":null,"release":"2013-10-25","status":"legacy","score":"414"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"26","nickname":"Firefox 26","details":null,"release":"2013-12-10","status":"legacy","score":"414"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"27","nickname":"Firefox 27","details":null,"release":"2014-02-04","status":"legacy","score":"416"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"28","nickname":"Firefox 28","details":null,"release":"2014-03-18","status":"legacy","score":"416"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"29","nickname":"Firefox 29","details":null,"release":"2014-04-29","status":"legacy","score":"434"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"30","nickname":"Firefox 30","details":null,"release":"2014-06-10","status":"legacy","score":"434"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"31","nickname":"Firefox 31","details":null,"release":"2014-07-22","status":"legacy","score":"446"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"32","nickname":"Firefox 32","details":null,"release":"2014-09-02","status":"legacy","score":"444"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"33","nickname":"Firefox 33","details":null,"release":"2014-10-14","status":"legacy","score":"444"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"34","nickname":"Firefox 34","details":null,"release":"2014-12-01","status":"legacy","score":"449"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"35","nickname":"Firefox 35","details":null,"release":"2015-01-14","status":"legacy","score":"449"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"36","nickname":"Firefox 36","details":null,"release":"2015-02-24","status":"legacy","score":"449"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"37","nickname":"Firefox 37","details":null,"release":"2015-03-31","status":"legacy","score":"449"},{"importance":"1","name":"Firefox","grouped":"Firefox","variant":"firefox","version":"38","nickname":"Firefox 38","details":null,"release":"2015-05-12","status":"current","score":"467"}]},{"name":"Internet Explorer","data":[{"importance":"1","name":"Internet Explorer","grouped":"Internet Explorer","variant":"ie","version":"8","nickname":"Internet Explorer 8","details":null,"release":"2009-03-19","status":"legacy","score":"33"},{"importance":"1","name":"Internet Explorer","grouped":"Internet Explorer","variant":"ie","version":"9","nickname":"Internet Explorer 9","details":null,"release":"2011-03-14","status":"legacy","score":"113"},{"importance":"1","name":"Internet Explorer","grouped":"Internet Explorer","variant":"ie","version":"10","nickname":"Internet Explorer 10","details":null,"release":"2012-10-26","status":"legacy","score":"297"},{"importance":"1","name":"Internet Explorer","grouped":"Internet Explorer","variant":"ie","version":"11","nickname":"Internet Explorer 11","details":null,"release":"2013-10-17","status":"current","score":"336"},{"importance":"1","name":"Internet Explorer","grouped":"Internet Explorer","variant":"ie","version":"TP","nickname":"Internet Explorer Technology Preview","details":null,"release":"2015-07-21","status":"development","score":"343"},{"importance":"1","name":"Internet Explorer","grouped":"Internet Explorer","variant":"ie","version":"Edge","nickname":"Edge","details":null,"release":"2015-07-21","status":"development","score":"402"}]},{"name":"Opera","data":[{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"10.60","nickname":"Opera 10.60","details":null,"release":"2010-07-01","status":"legacy","score":"184"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"11.50","nickname":"Opera 11.50","details":null,"release":"2011-06-28","status":"legacy","score":"246"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"11.60","nickname":"Opera 11.60","details":null,"release":"2011-12-06","status":"legacy","score":"270"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"12.10","nickname":"Opera 12.10","details":null,"release":"2012-11-06","status":"legacy","score":"338"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"18","nickname":"Opera 18","details":null,"release":"2013-11-19","status":"legacy","score":"453"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"19","nickname":"Opera 19","details":null,"release":"2014-02-13","status":"legacy","score":"455"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"20","nickname":"Opera 20","details":null,"release":"2014-03-13","status":"legacy","score":"461"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"21","nickname":"Opera 21","details":null,"release":"2014-05-14","status":"legacy","score":"466"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"22","nickname":"Opera 22","details":null,"release":"2014-06-18","status":"legacy","score":"473"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"23","nickname":"Opera 23","details":null,"release":"2014-07-22","status":"legacy","score":"462"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"24","nickname":"Opera 24","details":null,"release":"2014-09-02","status":"legacy","score":"485"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"26","nickname":"Opera 26","details":null,"release":"2014-12-03","status":"legacy","score":"497"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"27","nickname":"Opera 27","details":null,"release":"2015-01-27","status":"legacy","score":"512"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"28","nickname":"Opera 28","details":null,"release":"2015-03-10","status":"legacy","score":"519"},{"importance":"1","name":"Opera","grouped":"Opera","variant":"opera","version":"29","nickname":"Opera 29","details":null,"release":"2015-05-12","status":"current","score":"519"}]},{"name":"Safari","data":[{"importance":"1","name":"Safari","grouped":"Safari","variant":"safari","version":"5.1","nickname":"Safari 5.1","details":null,"release":"2011-07-20","status":"legacy","score":"250"},{"importance":"1","name":"Safari","grouped":"Safari","variant":"safari","version":"6.0","nickname":"Safari 6.0","details":null,"release":"2012-07-25","status":"legacy","score":"326"},{"importance":"1","name":"Safari","grouped":"Safari","variant":"safari","version":"7.0","nickname":"Safari 7.0","details":null,"release":"2013-10-22","status":"legacy","score":"352"},{"importance":"1","name":"Safari","grouped":"Safari","variant":"safari","version":"8.0","nickname":"Safari 8.0","details":null,"release":"2014-10-16","status":"current","score":"396"}]}];
+									var series = [];
+									
+									var start = new Date().getTime();
+									
+									for (var i = 0; i < sets.length; i++) {
+										var s = {
+											name: sets[i].name,
+											data: []
+										}
+										
+										for (var j = 0; j < sets[i].data.length; j++) {
+											var ts = new Date().getTime();
+											
+											if (sets[i].data[j].release) {
+												var date = sets[i].data[j].release.split('-');
+												var ts = Date.UTC(date[0], parseInt(date[1], 10) - 1, date[2]);
+											}
+											
+											start = Math.min(ts, start);
+											
+											s.data.push({
+												name:		sets[i].data[j].nickname,
+												status:		sets[i].data[j].status,
+												importance:	sets[i].data[j].importance,
+												x: 			ts,
+												y: 			parseInt(sets[i].data[j].score, 10)
+											});
+										}
+										
+										series.push(s);
+									}
+									
+									Highcharts.setOptions({
+									    chart: {
+									        style: {
+									            fontFamily: '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif'
+									        }
+									    }
+									});
+								
+									var chart = new Highcharts.Chart({
+										
+										chart: {
+											renderTo: 'timelineGraph',
+											zoomType: 'x',
+											type: 'line'
+										},
+										credits: {
+											enabled: false
+										},
+										title: {
+											text: t('HTML5test.com score over the years')
+										},
+										legend: {
+											borderWidth: 0,
+											margin: 40
+										},
+										xAxis: {
+											type: 'datetime',
+											min: Math.max(start, Date.UTC(2008,9,1)),
+											dateTimeLabelFormats: { 
+												month: '%b %Y',
+												year: '%b %Y'
+											}
+										},
+										yAxis: {
+											title: {
+												text: t('Score (points)')
+											},
+											min: 0
+										},
+										tooltip: {
+											formatter: function() {
+													return '<b>'+ this.key +'</b><br/>'+
+													(this.point.status != 'development' ? Highcharts.dateFormat('%b %Y', this.x) : t('Unreleased'))  +'<br>' + 
+													this.y +' points';
+											}
+										},
+										
+										plotOptions: {
+										    series: {
+										        step: 'left' 
+										    }
+										},
+										series: series
+									});
+			
+									for (var s = 0; s < chart.series.length; s++) {
+										if (chart.series[s].data[0].importance < 1) {
+											chart.series[s].hide();
+										}
+										/*
+										console.debug(chart.series[s].data[0])						
+										switch(chart.series[s].name) {
+											case 'Android':
+											case 'Blackberry':
+											case 'Chrome':
+											case 'Firefox':
+											case 'Internet Explorer':
+											case 'iOS':
+											case 'Opera':
+											case 'Safari':
+											case 'Windows':
+												break;
+											default:
+												chart.series[s].hide();
+										}
+										*/
+									}
+									
+									var canvas = document.getElementById('fsCanvas');
+									var button = document.getElementById('fsButton');
+									
+									if (canvas.requestFullscreen) {
+										button.style.display = '';
+										button.addEventListener('click', function() {
+											if (document.fullscreenElement) 
+												document.exitFullscreen();
+											else
+												canvas.requestFullscreen();
+										}, true);
+									}
+									
+								</script>
+</body>
+</html>
